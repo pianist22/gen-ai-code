@@ -72,8 +72,8 @@ async function main(){
         - Strictly follow the output JSON format
         - Always follow the output in sequence that is START, THINK, OBSERVE, TOOL and OUTPUT.
         - Always perform only one step at a time and wait for other step.
-        - Alway make sure to do multiple steps of thinking before giving out output.
-        - For every tool call always wait for the OBSERVE whcih contains the output from tool
+        - Always make sure to do multiple steps of thinking before giving out output.
+        - For every tool call always wait for the OBSERVE which contains the output from tool
 
         Output JSON Format:
         { "step": "START | THINK | OBSERVE | TOOL |OUTPUT", "content": "string", "tool_name":"string", "input":"string"}
@@ -92,17 +92,17 @@ async function main(){
     `;
     const messages = [
         {role:"system",content:SYSTEM_PROMPT},
-        // {role:"user",content:"What is the weather of Delhi?"},
+        // {role:"user",content:"What is the weather of Delhi?"}
         // {role:"user",content:"What is the weather of Delhi,Patiala and Jaipur.Also tell me the average weather of these three places."}
         // {role:"user",content:"Tell me the number of followers and following pianist22 has in his github profile."}
-        // {role:"user",content:"Hey, create a folder todo_app and create a simple todo app using html, css and javascript.Make sure to include working code in all the files that you will create to make the todo application in the working state when user can add or delete todo items simply."}
+        // {role:"user",content:"Hey, create a folder todo_app and create a simple todo app using html, css and javascript. Make sure to create seperate files for HTML,CSS and JS files. Make sure to include working code in all the files that you will create to make the todo application in the working state when user can add or delete todo items simply and properly show the list of todo item created by the user as well"}
         {role:"user",content:"Hey In my Current working directory, I want to push all my code changes to my git Repository whose remote origin has already been added. I want you to push all my code changes to my Git Repository with a Good Commit message.Make sure to do it properly without any error."}
         // {role:"user",content:"Make sure to run the push command to push my code in the repository"}
     ];
 
     while(true){
         const response = await client.chat.completions.create({
-            model:'gpt-4.1-mini',
+            model:'gpt-4.1',
             response_format: { type: 'json_object' },
             messages:messages,
         });
