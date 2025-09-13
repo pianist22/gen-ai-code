@@ -47,6 +47,7 @@ const TOOL_MAP = {
     "executeCommand": executeCommand
 };
 
+// Making the changes to keep check ssh key working 
 // PRISMA-> ORM- Create,Read,Update,Delete
 
 const client = new OpenAI();
