@@ -95,9 +95,9 @@ async function main(){
         {role:"system",content:SYSTEM_PROMPT},
         // {role:"user",content:"What is the weather of Delhi?"}
         // {role:"user",content:"What is the weather of Delhi,Patiala and Jaipur.Also tell me the average weather of these three places."}
-        // {role:"user",content:"Tell me the number of followers and following pianist22 has in his github profile."}
+        {role:"user",content:"Tell me the number of followers and following pianist22 has in his github profile."}
         // {role:"user",content:"Hey, create a folder todo_app and create a simple todo app using html, css and javascript. Make sure to create seperate files for HTML,CSS and JS files. Make sure to include working code in all the files that you will create to make the todo application in the working state when user can add or delete todo items simply and properly show the list of todo item created by the user as well"}
-        {role:"user",content:"Hey In my Current working directory, I want to push all my code changes to my git Repository whose remote origin has already been added. I want you to push all my code changes to my Git Repository with a Good Commit message.Make sure to do it properly without any error."}
+        // {role:"user",content:"Hey In my Current working directory, I want to push all my code changes to my git Repository whose remote origin has already been added. I want you to push all my code changes to my Git Repository with a Good Commit message.Make sure to do it properly without any error."}
         // {role:"user",content:"Make sure to run the push command to push my code in the repository"}
     ];
 
